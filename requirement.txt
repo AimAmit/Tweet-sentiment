@@ -1,0 +1,5 @@
+google-cloud-language
+tweepy
+python-telegram-bot
+nltk
+python-dotenv

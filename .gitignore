@@ -1,0 +1,5 @@
+.env/
+core-memento-246409-731c8a0cf703.json
+.vscode/
+venv/
+.dockerignore
