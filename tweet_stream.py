@@ -16,6 +16,7 @@ consumer_key = os.getenv('consumer_key')
 consumer_secret = os.getenv('consumer_secret')
 access_token = os.getenv('access_token')
 access_token_secret = os.getenv('access_token_secret')
+telegram_api = os.getenv('telegram_access_api')
 
 project = os.getenv('project')
 pubsub_topic = os.getenv('pubsub_topic')
@@ -34,7 +35,7 @@ def create_api():
     except Exception as e:
         # print("Error creating API")
         raise e
-    print("Twitter API created")
+    # print("Twitter API created")
     return api
 
 
@@ -129,7 +130,7 @@ if __name__ == "__main__":
     global api
     api = create_api()
 
-    updater = Updater('894973054:AAFpvbFF-TW5tBxxZGspj_yPAShDljQR2d8')
+    updater = Updater(telegram_api)
     dp = updater.dispatcher
     dp.add_handler(MessageHandler(Filters.text, send_the_result))
     updater.start_polling()
